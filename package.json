@@ -11,7 +11,7 @@
     "set-codependencies": "echo $GITHUB_RUN_NUMBER && ./set-codependencies.sh 0.0.$GITHUB_RUN_NUMBER",
     "set-codependencies-alpha": "echo $GITHUB_RUN_NUMBER && ./set-codependencies.sh 0.0.\"$GITHUB_RUN_NUMBER\"-alpha",
     "apply-github-info": "yarn ratchet-cli apply-ci-env-variables-to-files github projects/ngx-obtuse-common/src/build/ngx-obtuse-common-info.ts projects/ngx-obtuse-warden/src/build/ngx-obtuse-warden-info.ts ",
-    "publish": "cd dist/ngx-obtuse-common && touch yarn.lock && yarn npm publish --access public && cd ../ngx-obtuse-warden && touch yarn.lock  && yarn npm publish --access public",
+    "publish": "cd dist/ngx-obtuse-common && touch yarn.lock && pwd && ls && yarn npm publish --access public && cd ../ngx-obtuse-warden && touch yarn.lock && pwd && ls && yarn npm publish --access public",
     "publish-alpha": "yarn publish",
     "clean": "shx rm -Rf dist"
   },
