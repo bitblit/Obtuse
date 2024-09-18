@@ -55,7 +55,7 @@ jobs:
         shell: bash
 
       - name: Deploy to NPMJS
-        run: yarn publish-alpha
+        run: yarn publish-all
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
