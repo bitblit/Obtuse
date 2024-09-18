@@ -36,6 +36,7 @@
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
+    "@bitblit/ratchet-node-only": "4.0.469-alpha",
     "@angular-devkit/build-angular": "^18.2.4",
     "@angular/cli": "^18.2.4",
     "@angular/compiler-cli": "^18.2.0",
