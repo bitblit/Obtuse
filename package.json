@@ -10,7 +10,8 @@
     "build-all": "ng build ngx-obtuse-common && ng build ngx-obtuse-warden",
     "set-codependencies": "echo $GITHUB_RUN_NUMBER && ./set-codependencies.sh 0.0.$GITHUB_RUN_NUMBER",
     "set-codependencies-alpha": "echo $GITHUB_RUN_NUMBER && ./set-codependencies.sh 0.0.\"$GITHUB_RUN_NUMBER\"-alpha",
-
+    "apply-github-info": "yarn ratchet-cli apply-ci-env-variables-to-files github projects/ngx-obtuse-common/src/build/ngx-obtuse-common-info.ts projects/ngx-obtuse-warden/src/build/ngx-obtuse-warden-info.ts ",
+    "publish": "cd dist/ngx-obtuse-common && yarn npm publish --access public && cd ../ngx-obtuse-warden && yarn npm publish --access public",
     "clean": "shx rm -Rf dist"
   },
   "private": true,

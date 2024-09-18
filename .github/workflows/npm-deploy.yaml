@@ -27,22 +27,26 @@ jobs:
         run: yarn clean
         shell: bash
 
+      # Need this before build so it goes everywhere
+      - name: Apply Github Info
+        run: yarn apply-github-info
+        shell: bash
+
       - name: Build
         run: yarn build
         shell: bash
 
-      - name: Test
-        run: yarn test
-        shell: bash
+      # No tests yet since I need to make karma run headless
+      #- name: Run Tests (Conditionally)
+      #  if: env.SKIP_TESTS != 'true'
+      #  run: |
+      #    yarn test
+      #  shell: bash
 
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: Apply Github Info
-        run: yarn apply-github-info
-        shell: bash
+      #- name: Upload coverage reports to Codecov
+      #  uses: codecov/codecov-action@v3
+      #  env:
+      #    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Set Codependency versions
         run: yarn set-codependencies

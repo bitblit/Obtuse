@@ -13,3 +13,4 @@ export * from './lib/services/local-storage.service';
 export * from './lib/services/graphql-query.service';
 export * from './lib/services/window-ref.service';
 
+export * from './build/ngx-obtuse-common-info';
