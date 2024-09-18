@@ -15,7 +15,8 @@
     "publish-alpha": "yarn publish",
     "clean": "shx rm -Rf dist"
   },
-  "private": true,
+  "license": "Apache-2.0",
+  "private": false,
   "dependencies": {
     "@angular/animations": "^18.2.0",
     "@angular/common": "^18.2.0",
