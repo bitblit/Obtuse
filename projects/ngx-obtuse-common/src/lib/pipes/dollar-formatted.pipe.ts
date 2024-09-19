@@ -1,12 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import {CurrencyRatchet} from "@bitblit/ratchet-common/lang/currency-ratchet";
 
-@Pipe({ name: 'dollarFormatted', standalone: true })
+@Pipe({ name: 'obtDollars', standalone: true })
 export class DollarFormattedPipe implements PipeTransform {
   transform(input: number): string {
     const rval: string =
       input === null || input === undefined
         ? 'Null'
-        : '$' + input.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        : CurrencyRatchet.dollarFormat(input)
     return rval;
   }
 }
